@@ -1,0 +1,28 @@
+[{
+  "id": "black-tshirt",
+  "image": "/products/shirt.png",
+  "price": 7.95,
+  "name": "Black t-shirt",
+  "options": [{
+    "label": "size",
+    "values": ["S", "M", "L", "XL"]
+  }]
+}, {
+  "id": "black-hoodie",
+  "image": "/products/hoodie.png",
+  "price": 13,
+  "name": "Black hoodie",
+  "options": [{
+    "label": "size",
+    "values": ["S", "M", "L", "XL"]
+  }]
+}, {
+  "id": "black-cap",
+  "image": "/products/cap.png",
+  "price": 23,
+  "name": "Black cap",
+  "options": [{
+    "label": "size",
+    "values": ["S", "M", "L", "XL"]
+  }]
+}]
