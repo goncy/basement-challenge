@@ -133,7 +133,7 @@ const Home: NextPage<Props> = ({products}) => {
             <Text flex={1} padding={2}>
               Total: ${total}
             </Text>
-            <Button padding={2} variant="link" onClick={() => console.log(cart)}>
+            <Button padding={2} variant="link" onClick={() => console.log("CART: ", cart)}>
               CHECKOUT
             </Button>
           </Stack>
