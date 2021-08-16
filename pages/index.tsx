@@ -48,7 +48,7 @@ const Home: NextPage<Props> = ({products}) => {
         <Stack as="header">
           <Image alt="Basement supply" src={header} />
           <Text
-            as="marquee"
+            as={"marquee" as any}
             borderBottomWidth={1}
             borderColor="white"
             borderTopWidth={1}
