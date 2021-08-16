@@ -3,6 +3,8 @@
 # Basement studio challenge: Commerce
 Tenemos que implementar el diseño de [este figma](https://www.figma.com/file/BYjaSbdPyhEL0ucneDlIQ0/Dev-Challenge?node-id=1%3A218) (el equipo de diseño trabajó mucho en el figma, para esta primera etapa podemos omitir detalles mientras todo ande), como el backend todavía no está desarrollado el cliente nos dejó un mock en `/product/mock.json`.
 
+El checkout no está listo tampoco así que con imprimir en consola el pedido al clickear en `CHECKOUT` alcanza.
+
 El cliente quiere que usemos NextJS, TypeScript y Tailwind, pero por suerte nos dió el proyecto con todo ya configurado. También nos dejó instalada su fuente y una carpeta `assets`.
 
 También nos dijo que no era requerido, pero nos iba a pagar un importante bono por cada punto extra:
