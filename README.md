@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Basement studio](./assets/logo.svg "Basement studio")
 
-## Getting Started
+# Basement studio challenge: Commerce
+Tenemos que implementar el diseño de [este figma](https://www.figma.com/file/BYjaSbdPyhEL0ucneDlIQ0/Dev-Challenge?node-id=1%3A218) (el equipo de diseño trabajó mucho en el figma, para esta primera etapa podemos omitir detalles mientras todo ande), como el backend todavía no está desarrollado el cliente nos dejó un mock en `/product/mock.json`.
 
-First, run the development server:
+El cliente quiere que usemos NextJS, TypeScript y Tailwind, pero por suerte nos dió el proyecto con todo ya configurado. También nos dejó instalada su fuente y una carpeta `assets`.
 
+También nos dijo que no era requerido, pero nos iba a pagar un importante bono por cada punto extra:
+* Tests de integración con Cypress
+* Tests unitarios con Jest y React Testing Library
+* Guardar el cart del usuario en localStorage
+  * Nos aseguró que los productos siempre van a estar y nunca se van a modificar, así que podemos guardalos como queramos.
+
+También nos dijo que nos iba a pagar bonos por cualquier idea original que se nos ocurra agregar.
+
+Nos pidió que el código sea lo más prolijo posible, para que cuando el backend este implementado los cambios sean mínimos para poder integrarlo.
+
+Como el cliente no sabe de desarrollo nos pidió que despleguemos nuestra aplicación en algún lado y le mandemos un link para ver el progreso.
+
+## Corriendo el proyecto
 ```bash
+# Instalar dependencias del proyecto
+npm install
+
+# Correr el servidor de desarrollo
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Modalidad de entrega
+* Repositorio público subido a GitHub, Gitlab, Bitbucket.
