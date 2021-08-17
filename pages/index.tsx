@@ -1,7 +1,7 @@
 import type {NextPage} from "next";
 import Image from "next/image";
 
-import logo from "../assets/logo.svg";
+import logo from "../public/logo.svg";
 
 const Home: NextPage = () => {
   return (
