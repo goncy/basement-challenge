@@ -1,15 +1,20 @@
 import type {NextPage} from "next";
 import Image from "next/image";
+import Navbar from "../components/Navbar/Navbar";
 
-import logo from "../public/logo.svg";
+import header from '../public/header.svg'
+import footer from '../public/footer.svg'
 
 const Home: NextPage = () => {
   return (
-    <div className="h-full flex bg-black">
-      <header className="m-auto text-white text-center">
-        <Image alt="Basement" src={logo} />
-        <h4>Lets get this party started</h4>
+    <div className="w-full px-8 flex bg-black flex-col">
+      <Navbar/>
+      <header className="w-full">
+        <Image alt="Header" src={header} className='h-7' />
       </header>
+      <footer className="w-full">
+        <Image alt='Footer' src={footer} />
+      </footer>
     </div>
   );
 };
