@@ -25,3 +25,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+@layer utilities {
+  .hover-trigger .hover-target {
+    display: none;
+  }
+
+  .hover-trigger:hover .hover-target {
+      display: block;
+  }
+}

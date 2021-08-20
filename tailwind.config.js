@@ -6,6 +6,11 @@ module.exports = {
       colors:{
         'gradient-black-0': '#1D1D1D',
         'gradient-black-1': '#151515'
+      },
+      spacing: {
+        '27.5':'27.5rem',
+        '36.2':'36.2rem',
+        '5/12':'41.666667%'
       }
     },
   },
