@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar/Navbar";
 import TextBanner from "../components/TextBanner/TextBanner";
 import ProductList from "../components/ProductList/ProductList";
+import ShoppingCart from "../components/ShoppingCart/ShoppingCart";
 
 import header from '../public/header.svg'
 import footer from '../public/footer.svg'
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="w-full flex bg-black flex-col">
+      <ShoppingCart show={true} shoppingCart={productList}/>
       <Navbar/>
       <header className="w-full px-8">
         <Image alt="Header" src={header} className='h-7' />

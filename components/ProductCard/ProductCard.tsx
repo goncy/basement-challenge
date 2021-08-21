@@ -8,7 +8,6 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({product}) => {
-  console.log(product)
   return (
     <div className='flex flex-col hover-trigger cursor-pointer'>
       <div className='bg-gradient-to-b from-black via-black to-gradient-black-0 relative' >
