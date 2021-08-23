@@ -5,7 +5,7 @@ import ShoppingCartElement from './ShoppingCartElement';
 
 import yourCart from '../../public/yourCart.svg'
 import checkout from '../../public/checkout.svg'
-import ProductList from '../ProductList/ProductList';
+import cartMobile from '../../public/cartMobile.svg'
 
 interface ShoppingCartItem {
   product:Product,
@@ -60,12 +60,17 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({shoppingCart, show, toggleSh
   return (
     show ? 
     <div className='w-screen h-screen bg-black bg-opacity-70 absolute z-10 flex justify-end'>
-      <div className='bg-black w-51.5 border-b border-l border-white flex  flex-col justify-between'>
+      <div className=' w-screen h-screen sm:w-51.5 bg-black border-b border-l border-white flex  flex-col md:justify-between items-center'>
         <p 
           onClick={toggleShoppingCart}
-          className='self-end py-10 px-10 font-bold text-2xl'>CLOSE</p>
-          <Image alt='Your Cart' src={yourCart} width={760} height={89.47} />
-        <div className='py-11 h-4/6 overflow-y-scroll'>
+          className='self-end py-4 md:py-10 px-10 font-bold text-sm md:text-2xl'>→ CLOSE</p>
+          <div className='hidden sm:block'>
+            <Image alt='Your Cart' src={yourCart} width={760} height={89.47} />
+          </div>
+          <div className='sm:hidden'>
+            <Image alt='Your Cart' src={cartMobile} width={344} height={214} />
+          </div>
+        <div className=' py-8 h-3/6 md:py-11 md:h-4/6 overflow-y-scroll'>
           {shoppingCart.map((product,i)=>
             <ShoppingCartElement 
               item={product}
@@ -74,11 +79,14 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({shoppingCart, show, toggleSh
             />
           )}
         </div>
-        <div className='flex justify-between text-4xl border-t border-white h-24'>
-          <p className='py-6 px-8'>TOTAL: ${total}</p>
+        <div className=' text-xl self-end w-full flex items-center md:text-4xl md:border-t border-white h-24 flex-col md:flex-row'>
+          <div className='md:py-6 md:px-8 md:w-4/5 flex justify-between w-11/12'>
+            <p >TOTAL: </p>
+            <p>${total}</p>
+          </div>
           <div 
             onClick={handleCheckout}
-            className='border-l border-white w-72 py-6 px-8'>
+            className=' flex justify-center md:border-l border-t w-11/12 py-2  border-white md:w-72 md:py-6 md:px-8'>
             <Image alt='Checkout' src={checkout} width={235} height={42}/>
           </div>
         </div>

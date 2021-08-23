@@ -51,6 +51,7 @@ const Home: NextPage = () => {
         />
       <Navbar
         toggleShoppingCart={toggleShoppingCart}
+        cartLenght={shoppingCart.length}
       />
       <header className="w-full px-8">
         <Image alt="Header" src={header} className='h-7' />
