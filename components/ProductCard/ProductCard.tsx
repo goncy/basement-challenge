@@ -12,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({product, handleAddToCart}) => 
   return (
     <div 
       onClick={()=>handleAddToCart(product)}
-      className='w-27.5 h-36.2 flex flex-col hover-trigger cursor-pointer mb-24'
+      className='w-80 h-27.5  xs:w-27.5 xs:h-36.2 flex flex-col hover-trigger cursor-pointer mb-24'
       >
       <div className='bg-gradient-to-b from-black via-black to-gradient-black-0 relative' >
         <Image alt={product.name} src={product.image} width={435} height={577} />
