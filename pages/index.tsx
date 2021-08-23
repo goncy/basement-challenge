@@ -9,10 +9,11 @@ import ShoppingCart from "../components/ShoppingCart/ShoppingCart";
 import header from '../public/header.svg'
 import footer from '../public/footer.svg'
 import { Product } from "../product/types";
+import { ShoppingCartItem } from "../types/shoppingCartTypes";
 
 const Home: NextPage = () => {
   const [productList, setProductList] = useState<Product[]>([]);
-  const [shoppingCart, setShoppingCart] = useState([])
+  const [shoppingCart, setShoppingCart] = useState<ShoppingCartItem[]>([])
   const [show, setShow] = useState<boolean>(false)
 
   useEffect( () =>{

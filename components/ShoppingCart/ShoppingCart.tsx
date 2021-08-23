@@ -7,10 +7,7 @@ import yourCart from '../../public/yourCart.svg'
 import checkout from '../../public/checkout.svg'
 import cartMobile from '../../public/cartMobile.svg'
 
-interface ShoppingCartItem {
-  product:Product,
-  quantity: number
-}
+import {ShoppingCartItem} from '../../types/shoppingCartTypes'
 
 interface ShoppingCartProps {
   shoppingCart:ShoppingCartItem[]
@@ -20,7 +17,7 @@ interface ShoppingCartProps {
 }
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({shoppingCart, show, toggleShoppingCart, setShoppingCart}) => {
-  const [total, setTotal] = useState()
+  const [total, setTotal] = useState<number>()
 
   const changeQuantity = (type:String , product:ShoppingCartItem): void => {
     const newCart = [...shoppingCart]
@@ -39,7 +36,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({shoppingCart, show, toggleSh
     }
   }
 
-  const getTotal = (cart) => {
+  const getTotal = (cart:ShoppingCartItem[]) => {
     let newTotal : number = 0
     cart.forEach(p => {
       newTotal += (p.quantity * p.product.price)

@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { Product } from '../../product/types';
 import Image from 'next/image'
 
-interface ShoppingCartItem {
-  product:Product
-  quantity: number
-}
+import {ShoppingCartItem} from '../../types/shoppingCartTypes'
 
 interface ShoppingCartItemProps {
   item:ShoppingCartItem
