@@ -9,7 +9,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({productList,handleAddToCart}) => {
   return (
-    <div className='w-full flex justify-around'>
+    <div className='flex w-full justify-around flex-wrap'>
       {productList.map((product, i)=>
         <ProductCard
           product={product}

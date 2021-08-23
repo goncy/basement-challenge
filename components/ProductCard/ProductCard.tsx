@@ -12,12 +12,10 @@ const ProductCard: React.FC<ProductCardProps> = ({product, handleAddToCart}) => 
   return (
     <div 
       onClick={()=>handleAddToCart(product)}
-      className='flex flex-col hover-trigger cursor-pointer'
+      className='w-27.5 h-36.2 flex flex-col hover-trigger cursor-pointer mb-24'
       >
       <div className='bg-gradient-to-b from-black via-black to-gradient-black-0 relative' >
-        <div className='w-27.5 h-36.2' >
-          <Image alt={product.name} src={product.image} width={435} height={577} />
-        </div>
+        <Image alt={product.name} src={product.image} width={435} height={577} />
         <div className='absolute bottom-5/12 left-1/4 hover-target'>
           <Image alt='Add To Cart' src={addToCart}/>
         </div>
