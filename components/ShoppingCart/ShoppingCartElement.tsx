@@ -3,13 +3,19 @@ import { Product } from '../../product/types';
 import Image from 'next/image'
 
 interface ShoppingCartItem {
-  product:Product,
+  product:Product
   quantity: number
 }
 
-const ShoppingCartElement: React.FC<ShoppingCartItem> = ({product,quantity}) => {
-  const [selected, setSelected] = useState('')
+interface ShoppingCartItemProps {
+  item:ShoppingCartItem
+  changeQuantity: (type:String , product:ShoppingCartItem)=>void
+}
 
+const ShoppingCartElement: React.FC<ShoppingCartItemProps> = ({item, changeQuantity}) => {
+  const [selected, setSelected] = useState('')
+  let {product, quantity} = item
+  const [counter, setCounter] = useState(quantity)
   return (
     <div
     className='border border-white h-64 w-47.5 mx-8 my-6 flex'
@@ -27,9 +33,16 @@ const ShoppingCartElement: React.FC<ShoppingCartItem> = ({product,quantity}) => 
             <div className='flex text-2xl font-bold my-1'>
               <p>QUANTITY:</p>
               <div className='border border-white flex rounded-full w-20 text-2xl justify-around font-bold px-2 mx-3'>
-                <p onClick={()=>quantity--}>-</p>
-                {quantity}
-                <p onClick={()=>quantity++}>+</p>
+                <p onClick={()=>{
+                  changeQuantity('remove', item)
+                  setCounter(quantity-=1)  
+                }}>-</p>
+                {counter}
+                <p onClick={()=>{
+                  changeQuantity('add', item)
+                  setCounter(quantity+=1)  
+                }}
+                >+</p>
               </div>
             </div>
             <div className='flex text-2xl font-bold'>

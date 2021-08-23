@@ -5,11 +5,15 @@ import addToCart from '../../public/addToCart.svg'
 
 interface ProductCardProps {
   product: Product
+  handleAddToCart: (product:Product)=>void
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({product}) => {
+const ProductCard: React.FC<ProductCardProps> = ({product, handleAddToCart}) => {
   return (
-    <div className='flex flex-col hover-trigger cursor-pointer'>
+    <div 
+      onClick={()=>handleAddToCart(product)}
+      className='flex flex-col hover-trigger cursor-pointer'
+      >
       <div className='bg-gradient-to-b from-black via-black to-gradient-black-0 relative' >
         <div className='w-27.5 h-36.2' >
           <Image alt={product.name} src={product.image} width={435} height={577} />
