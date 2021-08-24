@@ -5,10 +5,8 @@ export default extendTheme({
     Button: {
       variants: {
         outline: {
+          borderRadius: 9999,
           borderWidth: 2,
-          ":hover": {
-            color: "black",
-          },
         },
         link: {
           color: "white",

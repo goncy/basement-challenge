@@ -1,6 +1,7 @@
-import React from "react";
 import type {GetStaticProps, NextPage} from "next";
-import Image from "next/image";
+import type {Product} from "../product/types";
+
+import React from "react";
 import {
   Box,
   Button,
@@ -12,11 +13,11 @@ import {
   StackDivider,
   useDisclosure,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
-import logo from "../assets/logo.svg";
-import header from "../assets/header.svg";
 import footer from "../assets/footer.svg";
-import {Product} from "../product/types";
+import header from "../assets/header.svg";
+import logo from "../assets/logo.svg";
 
 interface Props {
   products: Product[];
@@ -41,7 +42,7 @@ const Home: NextPage<Props> = ({products}) => {
           paddingY={4}
         >
           <Image alt="Basement" src={logo} />
-          <Button borderRadius={9999} paddingX={6} variant="outline" onClick={onCartOpen}>
+          <Button paddingX={6} variant="outline" onClick={onCartOpen}>
             CART ({cart.length})
           </Button>
         </Stack>
